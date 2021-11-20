@@ -13,6 +13,7 @@
 }
 
 
+
 /* Navigation Style */
 .navbar{
     position: fixed;
@@ -58,7 +59,7 @@
     color: whitesmoke;
     font-size: 18px;
     font-weight: 500;
-    margin-left: 20px;
+    margin-left: 26px;
     transition: color 0.5s ease;
 }
 .navbar .menu li a:hover{
@@ -69,16 +70,15 @@
     color: whitesmoke;
 }
 
+
 /* Menu Button */
 .menu-btn{
     color: whitesmoke;
-    font-size: 23px;
+    font-size: 25px;
     cursor: pointer;
     display: none;
 }
 
-
-/* Menu Section */
 
 
 /* Home Section */
@@ -128,16 +128,14 @@
     background: black;
 }
 
-/* About Me Section */
+
+
+/* Similar Codes for all sections */
 section{
     padding: 100px 0;
 }
 
-.about{
-    font-family: 'Poppins', sans-serif;
-}
-
-.about .title{
+section .title{
     font-family: 'Ubuntu', sans-serif;
     font-size: 50px;
     font-weight: 500;
@@ -146,8 +144,9 @@ section{
     position: relative;
     text-align: center;
 }
+  
 
-.about .title::before{
+section .title::before{
     content: "";
     position: absolute;
     bottom: 0px;
@@ -158,19 +157,32 @@ section{
     transform: translateX(-50%);
 }
 
-.about .title::after{
-    content: "Introduction";
+section .title::after{
     position: absolute;
-    bottom: -13px;
+    bottom: -14px;
     left: 50%;
     font-size: 20px;
     color: crimson;
     padding: 5px;
-    background: white;
+    background: rgb(255, 255, 255);
     transform: translateX(-50%)
 }
 
-.about .about-content{
+
+/* About Me Section */
+.about, .skill{
+    font-family: 'Poppins', sans-serif;
+}
+
+.about .title span{
+    color: rgb(129, 10, 10);
+}
+
+.about .title::after{
+    content: "Introduction";
+}
+
+.about .about-content, .skill .skill-content{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -179,7 +191,6 @@ section{
 
 .about .about-content .left{
     width: 50%;
-
 }
 
 .about .about-content .left img{
@@ -205,6 +216,7 @@ section{
 }
 
 .about .about-content .right p{
+    color: #222 ;
     text-align: justify;
     font-size: 18.3px;
 }
@@ -214,11 +226,223 @@ section{
 }
 
 
+
+/* Education Section */
+.education{
+    background: black;
+    color: rgb(202, 197, 197);
+    font-family: 'Poppins', sans-serif;
+}
+
+.education .heading{
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    position: relative;
+    font-size: 45px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    padding-bottom: 19px;
+}
+
+.education .heading::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background:rgb(209, 206, 206);
+    transform: translateX(-50%);
+}
+
+.education .heading::after{
+    content: "History";
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    font-size: 20px;
+    color: rgb(187, 10, 46);
+    padding: 5px;
+    background: black;
+    transform: translateX(-50%)
+}
+
+.education .heading span{
+    color: rgb(134, 10, 10)
+}
+
+.education .box-container{
+    display: flex;  
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 16px 0;
+}
+
+.education .box-container .card{
+    width: calc(33% - 20px);
+    background: #222;
+    border-radius: 10px;
+    padding: 20px 20px;
+    display: flex;  
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-left: 80px;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+.education .box-container .card:hover{
+    border: 2px solid rgb(121, 19, 19);
+    background: rgb(59, 22, 22);
+    transition: all 1s ease;
+}
+
+.education .box-container .card .box{
+    transition: all 0.45s ease;
+}
+
+.education .box-container .card:hover .box{
+    transform:scale(1.05)
+}
+
+.education .box-container .box{
+    width: 432px;
+    margin: 64px 16px;
+    padding-left: 64px;
+    border-left: 3.2px solid rgb(138, 6, 6);
+    position: relative;
+}
+
+
+.education .box-container .box span{
+    font-size: 20.8px;
+    background:rgb(122, 6, 6);
+    color: rgb(212, 209, 209);
+    border-radius: 80px;
+    padding: 8px 40px;
+}
+
+.education .box-container .card:hover .box span{
+    color: rgb(170, 22, 22);
+    border: 2px solid rgb(187, 10, 46);
+    background: rgb(10, 10, 10);
+    transition: all 1s ease;
+}
+
+.education .box-container .box h3{
+    font-size: 30px;
+    color:rgb(160, 20, 20);
+    padding-top: 24px;
+}
+
+
+.education .box-container .box p{
+    font-size: 22.4px;
+    color:rgb(223, 213, 213);
+    padding: 16px 0;
+}
+
+.education .box-container .box i{
+    position: absolute;
+    top: -24px;; left:-40px;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    line-height: 80px;
+    text-align: center;
+    font-size: 32px;
+    color: rgb(197, 194, 194);
+    background: rgb(110, 11, 11);
+}
+
+.education .box-container .card:hover .box i{
+    color: rgb(160, 20, 20);
+    border: 2px solid rgb(187, 10, 46);
+    background: black;
+    transition: all 1s ease;
+}
+
+
+/* Skills Section */
+.skill{
+    background: rgb(7, 6, 6);
+    color: rgb(167, 164, 164);
+}
+
+.skill .title span{
+    color: rgb(138, 14, 14)
+}
+
+.skill .title::before{
+    background: whitesmoke;
+}
+
+.skill .title::after{
+    background: rgb(0, 0, 0);
+    content: "Experience";
+}
+
+.skill .skill-content .box2 p{
+    color: rgb(188, 189, 190);
+}
+
+.skill .skill-content .box2:hover p{
+    color:rgb(223, 224, 226);
+    transition: color 0.5s ease;
+}
+
+.skill .skill-content .card2{
+    width: calc(33% - 20px);
+    background: #222;
+    text-align: center;
+    padding: 20px 25px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.skill .skill-content .card2:hover{
+    border: solid 2px rgb(148, 16, 16);
+    transition: all 0.5s ease;
+    background: rgb(59, 8, 8)
+}
+
+.skill .skill-content .card2 .box2{
+    transition: all 0.5s ease;
+}
+
+.skill .skill-content .card2:hover .box2{
+    transform: scale(1.05);
+}
+
+.skill .skill-content .card2 i{
+    font-size: 45px;
+    color: rgb(167, 17, 17);
+    transition: color 0.5s ease;
+}
+
+.skill .skill-content .card2:hover i{
+    transition: all 0.5s ease;
+    color: rgb(180, 178, 178);
+}
+
+
+.skill .skill-content .card2 .text{
+    color: rgb(182, 3, 3);
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+
+
 /* Responsive Media Query */
 @media (max-width: 1400px){
     .home .max-width{
         margin-left: 0px;
     }
+
 }
 
 @media (max-width: 1150px){
@@ -301,7 +525,16 @@ section{
     .about .about-content .right{
         flex: 100%;
     }
-    
+
+    .education .box-container .card{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+
+    .skill .skill-content .card2{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
 }
 
 @media (max-width: 770px){
@@ -322,6 +555,18 @@ section{
         font-size: 19px;
         padding: 7px 21px;
     }
+    
+    .education .box-container .box{
+        width:100%;
+    }
+
+    .education .box-container .card{
+        width: 100%;
+    }
+
+    .skill .skill-content .card2{
+        width: 100%;
+    }
 }
 
 @media (max-width: 550px){
@@ -336,5 +581,13 @@ section{
     
     .home .home-content .text-3{
         font-size: 24px;
+    }
+
+    .education .box-container .box{
+        width:100%;
+    }
+
+    .education .box-container .card{
+        width: 100%;
     }
 }
